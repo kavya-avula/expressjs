@@ -3,6 +3,9 @@ const app=express();
 const port=8080;
 const path=require("path");
 
+app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname,"public/css when more than one folder in public"))); this is for setting path 
+
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
 
